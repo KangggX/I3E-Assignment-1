@@ -94,12 +94,12 @@ public class SamplePlayer : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 
         Vector3 playerRotation = transform.rotation.eulerAngles;
-        playerRotation.y += Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+        playerRotation.y += mouseX;
 
         transform.rotation = Quaternion.Euler(playerRotation);
 
         Vector3 cameraRotation = playerCamera.transform.rotation.eulerAngles;
-        cameraRotation.x -= Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
+        cameraRotation.x -= mouseY;
 
         playerCamera.transform.rotation = Quaternion.Euler(cameraRotation);
     }
