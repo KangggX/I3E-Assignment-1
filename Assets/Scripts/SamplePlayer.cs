@@ -37,6 +37,7 @@ public class SamplePlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         nextState = "Idle";
     }
 
@@ -89,15 +90,16 @@ public class SamplePlayer : MonoBehaviour
 
     private void CheckRotation()
     {
+        float mouseX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
+
         Vector3 playerRotation = transform.rotation.eulerAngles;
-        playerRotation.x += -1 * Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
         playerRotation.y += Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
 
         transform.rotation = Quaternion.Euler(playerRotation);
 
         Vector3 cameraRotation = playerCamera.transform.rotation.eulerAngles;
-        cameraRotation.x += -1 * Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
-        cameraRotation.y += Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
+        cameraRotation.x -= Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
 
         playerCamera.transform.rotation = Quaternion.Euler(cameraRotation);
     }
