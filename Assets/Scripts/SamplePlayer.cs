@@ -44,6 +44,8 @@ public class SamplePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if(nextState != currentState)
         {
             SwitchState();
