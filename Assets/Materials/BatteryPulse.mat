@@ -8,7 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BatteryPulse
-  m_Shader: {fileID: -6465566751694194690, guid: 53a48f36a3daa69439983b9edb0847c7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 53a48f36a3daa69439983b9edb0847c7,
+    type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_06586cfb5e60473c8c4bde4d6fd79e37:
+        m_Texture: {fileID: 2800000, guid: 149a90b5b95264643ac3b320d9c475b0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -80,6 +85,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_76c6ecb53b0447199f7e5f07c3d10c1d: 3
     - Vector1_ee4c9614b72b4e7f96ed75036f6af06a: 3
     - _AlphaClip: 0
     - _Blend: 0
@@ -108,7 +114,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_1fdcc86dc3724c67875f216fc17f20d6: {r: 2.9960785, g: 1.3333334, b: 0.15686275, a: 0}
+    - Color_1fdcc86dc3724c67875f216fc17f20d6: {r: 2.9960785, g: 1.3333334, b: 0.15686275,
+        a: 0}
     - Color_5a44597f8638456ea39bf08b637a5695: {r: 1, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
