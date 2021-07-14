@@ -29,9 +29,7 @@ public class SamplePlayer : MonoBehaviour
     /// Should be dragged in from Inspector.
     /// </summary>
     public Camera playerCamera;
-
     public string currentState;
-
     public string nextState;
 
     // Start is called before the first frame update
