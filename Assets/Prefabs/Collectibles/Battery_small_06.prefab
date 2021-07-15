@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4548360255671415579}
   - component: {fileID: 4548360255674315579}
   - component: {fileID: 4548360255673315835}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Battery_small_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,6 +60,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 9a96fb19838d47a4aa48e3293607e468, type: 2}
+  - {fileID: 2100000, guid: 5d9786d5e2a27324687aae24351d7513, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
