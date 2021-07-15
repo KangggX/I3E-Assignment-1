@@ -13,6 +13,10 @@ public class DoorPad : MonoBehaviour
         StartCoroutine(Countdown());
     }
 
+    /// <summary>
+    /// 3 seconds countdown timer
+    /// </summary>
+    /// <returns>Closing the door/gate</returns>
     IEnumerator Countdown()
     {
         yield return new WaitForSeconds(3f);
