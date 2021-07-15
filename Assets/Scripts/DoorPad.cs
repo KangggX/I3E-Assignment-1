@@ -15,7 +15,7 @@ public class DoorPad : MonoBehaviour
 
     IEnumerator Countdown()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         doorAnimator.SetBool("activated", false);
     }
 }
