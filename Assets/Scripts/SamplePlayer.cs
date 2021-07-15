@@ -136,9 +136,10 @@ public class SamplePlayer : MonoBehaviour
 
     private void Raycast()
     {
+        Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * 10f, Color.blue);
         RaycastHit hit;
 
-        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 100f))
+        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 10f))
         {
             Debug.Log(hit.transform.name);
         }
