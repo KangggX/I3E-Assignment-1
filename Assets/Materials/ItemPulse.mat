@@ -7,9 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BatteryPulse
-  m_Shader: {fileID: -6465566751694194690, guid: 53a48f36a3daa69439983b9edb0847c7,
-    type: 3}
+  m_Name: ItemPulse
+  m_Shader: {fileID: -6465566751694194690, guid: 53a48f36a3daa69439983b9edb0847c7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -114,8 +113,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_1fdcc86dc3724c67875f216fc17f20d6: {r: 2.9960785, g: 1.3333334, b: 0.15686275,
-        a: 0}
+    - Color_1fdcc86dc3724c67875f216fc17f20d6: {r: 2.9960785, g: 1.3333334, b: 0.15686275, a: 0}
     - Color_5a44597f8638456ea39bf08b637a5695: {r: 1, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

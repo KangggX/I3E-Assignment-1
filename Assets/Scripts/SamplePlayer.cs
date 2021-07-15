@@ -33,23 +33,23 @@ public class SamplePlayer : MonoBehaviour
     public string nextState;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         nextState = "Idle";
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-
         if(nextState != currentState)
         {
             SwitchState();
         }
 
         CheckRotation();
+
+        Raycast();
     }
 
     /// <summary>
@@ -132,5 +132,15 @@ public class SamplePlayer : MonoBehaviour
             return true;
         }
 
+    }
+
+    private void Raycast()
+    {
+        RaycastHit hit;
+
+        if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 100f))
+        {
+            Debug.Log(hit.transform.name);
+        }
     }
 }
