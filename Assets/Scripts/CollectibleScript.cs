@@ -9,18 +9,30 @@ public class CollectibleScript : MonoBehaviour
 
     public void Update()
     {
-        if(isDetected)
+        detectionChecker();
+    }
+
+    private void detectionChecker()
+    {
+        if (isDetected)
         {
-            fresnelChanger(3);
-        } 
+            gameObject.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 3);
+        }
         else
         {
-            fresnelChanger(100);
+            gameObject.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 100);
         }
     }
 
-    private MeshRenderer fresnelChanger(float power)
+    private void OnTriggerEnter(Collider other)
     {
-        return gameObject.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", power);
+        Debug.Log("trigger enter");
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("trigger exit");
+    }
+
+
 }

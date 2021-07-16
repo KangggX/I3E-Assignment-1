@@ -141,14 +141,15 @@ public class SamplePlayer : MonoBehaviour
 
         if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 10f))
         {
-            GameObject objectTransform = hit.transform.gameObject;
+            
+            //GameObject objectTransform = hit.transform.gameObject;
             //Debug.Log(hit.transform.name);
-            if (objectTransform.layer == LayerMask.NameToLayer("Collectible"))
-            {
+            //if (objectTransform.layer == LayerMask.NameToLayer("Collectible"))
+            //{
                 //Debug.Log(objectTransform.GetComponent<MeshRenderer>().materials[1]);
                 //objectTransform.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 3);
 
-            }
+            //}
         }
     }
 }
