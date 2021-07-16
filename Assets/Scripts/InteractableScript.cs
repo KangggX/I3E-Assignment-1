@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class InteractableScript : MonoBehaviour
 {
+    public ScriptableObject playerData;
     public int value;
     public string objectType;
 
-    public void Interaction()
+    private string[] objectTypeArray = new string[] {"batteryAmount", "cardAmount", "fuse", "finalFuse"};
+    public void Collectible()
+    {
+        gameObject.SetActive(false);
+
+        foreach (string i in objectTypeArray)
+        {
+            if (objectType == i)
+            {
+                
+            }
+        }
+    }
+
+    public void Crate()
     {
 
     }
