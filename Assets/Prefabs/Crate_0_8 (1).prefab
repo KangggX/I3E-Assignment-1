@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 213505258526388938}
   - component: {fileID: 619771117221310159}
   - component: {fileID: 1327020496964404345}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ChamferBox001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37720254765584288}
   - component: {fileID: 6615566885919933087}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Crate_0_8 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8716366748046182411}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CreateCap_0_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 5136828139457164424}
   - component: {fileID: 1671063253038695438}
   - component: {fileID: 4627667264606997792}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Object001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
