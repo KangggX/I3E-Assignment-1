@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractableScript : MonoBehaviour
 {
+    public int value;
+
     public void Update()
     {
         
