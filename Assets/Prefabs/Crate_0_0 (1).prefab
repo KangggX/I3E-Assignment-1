@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426525460966218106}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.45165968, y: -9.254442, z: 4.776759}
+  m_LocalPosition: {x: 0.4513545, y: -9.26436, z: 4.1346693}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1426225102159604567}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 4610959528520683046}
   m_Layer: 3
   m_Name: Crate_0_0 (1)
-  m_TagString: Untagged
+  m_TagString: Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

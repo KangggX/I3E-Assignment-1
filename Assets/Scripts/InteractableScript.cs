@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class InteractableScript : MonoBehaviour
 {
-    public bool isDetected;
-    public float fresnelPower;
-
     public void Update()
     {
         
     }
 
-    public void detectionChecker(bool state)
+    public void Interaction()
+    {
+
+    }
+
+    public void DetectionChecker(bool state)
     {
         if (state)
         {

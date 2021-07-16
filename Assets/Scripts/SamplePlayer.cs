@@ -32,8 +32,8 @@ public class SamplePlayer : MonoBehaviour
     public string currentState;
     public string nextState;
 
-    private GameObject currentInteractedCollectible;
-    private GameObject lastInteractedCollectible;
+    private GameObject currentInteractedObject;
+    private GameObject lastInteractedObject;
 
     // Start is called before the first frame update
     private void Start()
@@ -149,18 +149,22 @@ public class SamplePlayer : MonoBehaviour
             if(objectTransform.layer == LayerMask.NameToLayer("Interactable"))
             {
                 //Debug.Log(objectTransform.GetComponent<MeshRenderer>().materials[1]);
-                currentInteractedCollectible = objectTransform;
-                lastInteractedCollectible = currentInteractedCollectible;
-                currentInteractedCollectible.GetComponent<InteractableScript>().detectionChecker(true);
+                currentInteractedObject = objectTransform;
+                lastInteractedObject = currentInteractedObject;
+                currentInteractedObject.GetComponent<InteractableScript>().DetectionChecker(true);
 
-                if(currentInteractedCollectible.CompareTag("Collectible") && Input.GetKeyDown(KeyCode.E))
+                if(currentInteractedObject.CompareTag("Collectible") && Input.GetKeyDown(KeyCode.E))
                 {
-                    currentInteractedCollectible.SetActive(false);
+                    currentInteractedObject.SetActive(false);
+                }
+                else if (currentInteractedObject.CompareTag("Crate") && Input.GetKeyDown(KeyCode.E))
+                {
+                    currentInteractedObject.GetComponent<Animator>().SetBool("activated", true);
                 }
             }
             else
             {
-                lastInteractedCollectible.GetComponent<InteractableScript>().detectionChecker(false);
+                lastInteractedObject.GetComponent<InteractableScript>().DetectionChecker(false);
             }
         }
     }
