@@ -32,6 +32,7 @@ public class SamplePlayer : MonoBehaviour
     public string currentState;
     public string nextState;
 
+    private GameObject currentInteractedCollectible;
     private GameObject lastInteractedCollectible;
 
     // Start is called before the first frame update
@@ -145,15 +146,21 @@ public class SamplePlayer : MonoBehaviour
         {
             GameObject objectTransform = hit.transform.gameObject;
             //Debug.Log(hit.transform.name);
-            if (objectTransform.layer == LayerMask.NameToLayer("Collectible"))
+            if(objectTransform.layer == LayerMask.NameToLayer("Collectible"))
             {
                 //Debug.Log(objectTransform.GetComponent<MeshRenderer>().materials[1]);
-                lastInteractedCollectible = objectTransform;
-                lastInteractedCollectible.GetComponent<CollectibleScript>().detectionChecker(true);
+                currentInteractedCollectible = objectTransform;
+                lastInteractedCollectible = currentInteractedCollectible;
+                currentInteractedCollectible.GetComponent<InteractableScript>().detectionChecker(true);
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    currentInteractedCollectible.SetActive(false);
+                }
             }
             else
             {
-                lastInteractedCollectible.GetComponent<CollectibleScript>().detectionChecker(false);
+                lastInteractedCollectible.GetComponent<InteractableScript>().detectionChecker(false);
             }
         }
     }
