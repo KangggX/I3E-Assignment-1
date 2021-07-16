@@ -146,7 +146,8 @@ public class SamplePlayer : MonoBehaviour
             if (objectTransform.layer == LayerMask.NameToLayer("Collectible"))
             {
                 //Debug.Log(objectTransform.GetComponent<MeshRenderer>().materials[1]);
-                objectTransform.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 3);
+                //objectTransform.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 3);
+
             }
         }
     }
