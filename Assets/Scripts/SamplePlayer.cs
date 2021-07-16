@@ -29,7 +29,6 @@ public class SamplePlayer : MonoBehaviour
     /// Should be dragged in from Inspector.
     /// </summary>
     public Camera playerCamera;
-    public int jumpHeight;
     public string currentState;
     public string nextState;
 
@@ -52,12 +51,8 @@ public class SamplePlayer : MonoBehaviour
         }
 
         CheckRotation();
-        Raycast();
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
-        }
+        Raycast();
     }
 
     /// <summary>
