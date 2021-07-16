@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4548360255674315579}
   - component: {fileID: 4548360255673315835}
   - component: {fileID: -5438837205860717484}
+  - component: {fileID: 7810634105199141778}
   m_Layer: 3
   m_Name: Battery_small_06
   m_TagString: Untagged
@@ -96,3 +97,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.116731, y: 8.477747, z: 10.157211}
   m_Center: {x: 0.00000047683716, y: 0, z: 5.0786057}
+--- !u!114 &7810634105199141778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4548360255671316283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30008b4c7fe7c6347b8efa7c68137806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDetected: 0
+  fresnelPower: 0
