@@ -164,7 +164,10 @@ public class SamplePlayer : MonoBehaviour
             }
             else
             {
-                lastInteractedObject.GetComponent<InteractableScript>().DetectionChecker(false);
+                if(lastInteractedObject != null)
+                {
+                    lastInteractedObject.GetComponent<InteractableScript>().DetectionChecker(false);
+                }
             }
         }
     }
