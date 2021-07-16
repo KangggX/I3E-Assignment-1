@@ -29,6 +29,7 @@ public class SamplePlayer : MonoBehaviour
     /// Should be dragged in from Inspector.
     /// </summary>
     public Camera playerCamera;
+    public int jumpHeight;
     public string currentState;
     public string nextState;
 
@@ -51,8 +52,12 @@ public class SamplePlayer : MonoBehaviour
         }
 
         CheckRotation();
-
         Raycast();
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+        }
     }
 
     /// <summary>
@@ -155,11 +160,11 @@ public class SamplePlayer : MonoBehaviour
 
                 if(currentInteractedObject.CompareTag("Collectible") && Input.GetKeyDown(KeyCode.E))
                 {
-                    currentInteractedObject.SetActive(false);
+                    currentInteractedObject.GetComponent<InteractableScript>().Collectible();
                 }
                 else if (currentInteractedObject.CompareTag("Crate") && Input.GetKeyDown(KeyCode.E))
                 {
-                    currentInteractedObject.GetComponent<Animator>().SetBool("activated", true);
+                    currentInteractedObject.GetComponent<InteractableScript>().Crate();
                 }
             }
             else
