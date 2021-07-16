@@ -146,14 +146,14 @@ public class SamplePlayer : MonoBehaviour
         {
             GameObject objectTransform = hit.transform.gameObject;
             //Debug.Log(hit.transform.name);
-            if(objectTransform.layer == LayerMask.NameToLayer("Collectible"))
+            if(objectTransform.layer == LayerMask.NameToLayer("Interactable"))
             {
                 //Debug.Log(objectTransform.GetComponent<MeshRenderer>().materials[1]);
                 currentInteractedCollectible = objectTransform;
                 lastInteractedCollectible = currentInteractedCollectible;
                 currentInteractedCollectible.GetComponent<InteractableScript>().detectionChecker(true);
 
-                if(Input.GetKeyDown(KeyCode.E))
+                if(currentInteractedCollectible.CompareTag("Collectible") && Input.GetKeyDown(KeyCode.E))
                 {
                     currentInteractedCollectible.SetActive(false);
                 }

@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - SF_Door
+  - Enemy
+  - Collectible
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Collectible
+  - Interactable
   - Water
   - UI
   - Player
