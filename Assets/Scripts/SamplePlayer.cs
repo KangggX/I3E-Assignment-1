@@ -29,12 +29,14 @@ public class SamplePlayer : MonoBehaviour
     /// Should be dragged in from Inspector.
     /// </summary>
     public Camera playerCamera;
-    public int jumpHeight;
-    public string currentState;
-    public string nextState;
+    public GameObject QuestUI;
+    public int jumpPower;
 
     private GameObject currentInteractedObject;
     private GameObject lastInteractedObject;
+    private string currentState;
+    private string nextState;
+    private bool enabledUI = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -56,7 +58,23 @@ public class SamplePlayer : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if(enabledUI)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                QuestUI.SetActive(true);
+                enabledUI = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                QuestUI.SetActive(false);
+                enabledUI = true;
+            }
         }
     }
 

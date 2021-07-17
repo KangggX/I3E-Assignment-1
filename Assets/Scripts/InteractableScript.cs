@@ -36,19 +36,19 @@ public class InteractableScript : MonoBehaviour
     {
         if(oType == "Battery")
         {
-            ++playerData.batteryAmount;
+            ++playerData.currentBatteryAmount;
         }
         else if(oType == "Card")
         {
-            ++playerData.cardAmount;
+            ++playerData.currentCardAmount;
         }
         else if (oType == "Fuse")
         {
-            ++playerData.fuse;
+            ++playerData.currentFuseAmount;
         }
         else if (oType == "FinalFuse")
         {
-            ++playerData.finalFuse;
+            ++playerData.currentFinalFuseAmount;
         }
     }
 }
