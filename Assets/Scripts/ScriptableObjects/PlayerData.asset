@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31837a0f56ef08147b290deb44e1bafe, type: 3}
-  m_Name: Player Item Data
+  m_Name: PlayerData
   m_EditorClassIdentifier: 
-  batteryAmount: 0
-  cardAmount: 0
-  fuse: 0
-  finalFuse: 0
+  currentBatteryAmount: 0
+  currentCardAmount: 0
+  currentFuseAmount: 0
+  currentAdvancedFuseAmount: 0
+  initialBatteryAmount: 0
+  initialCardAmount: 0
+  initialFuseAmount: 0
+  initialAdvancedFuseAmount: 0

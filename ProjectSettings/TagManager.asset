@@ -8,7 +8,7 @@ TagManager:
   - Enemy
   - Collectible
   - Crate
-  - Battery
+  - Inserter
   layers:
   - Default
   - TransparentFX
