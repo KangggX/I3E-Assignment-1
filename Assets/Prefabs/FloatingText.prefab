@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Find and Collect ID Card from the small crates and
+  m_text: Find the ID Card
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 376f0ff34cac3ac47aa70d5968e8dbb4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

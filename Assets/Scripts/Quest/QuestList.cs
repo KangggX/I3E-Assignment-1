@@ -9,15 +9,9 @@ public class QuestList : MonoBehaviour
     public TextMeshProUGUI textPrefab;
     public Transform questHolder;
 
-    private void Awake()
-    {
-        
-        //ListSorter(12, 12);
-    }
-
     public void ListSorter(int start, int end)
     {
-        for(int i = start; i < end; ++i)
+        for (int i = start; i <= end; ++i)
         {
             textPrefab.text = questList[i];
             SpawnText();

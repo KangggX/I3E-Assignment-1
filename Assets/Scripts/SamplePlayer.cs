@@ -36,19 +36,22 @@ public class SamplePlayer : MonoBehaviour
     private GameObject lastInteractedObject;
     private string currentState;
     private string nextState;
-    private bool enabledUI = false;
+    private float storedRotationSpeed;
+    private bool enabledUI = true;
 
     // Start is called before the first frame update
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        storedRotationSpeed = rotationSpeed;
         nextState = "Idle";
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if(nextState != currentState)
+        if (nextState != currentState)
         {
             SwitchState();
         }
@@ -56,7 +59,7 @@ public class SamplePlayer : MonoBehaviour
         CheckRotation();
         Raycast();
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
         }
@@ -66,14 +69,18 @@ public class SamplePlayer : MonoBehaviour
             if(enabledUI)
             {
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 QuestUI.SetActive(true);
                 enabledUI = false;
+                rotationSpeed = 0;
             }
             else
             {
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 QuestUI.SetActive(false);
                 enabledUI = true;
+                rotationSpeed = storedRotationSpeed;
             }
         }
     }
@@ -160,6 +167,9 @@ public class SamplePlayer : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Raycasting method for various purposes such as for interacting with collectibles
+    /// </summary>
     private void Raycast()
     {
         Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * 16, Color.blue);

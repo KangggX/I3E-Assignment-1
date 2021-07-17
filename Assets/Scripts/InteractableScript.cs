@@ -8,7 +8,7 @@ public class InteractableScript : MonoBehaviour
     public int value;
     public string objectType;
 
-    private string[] objectTypeArray = new string[] {"batteryAmount", "cardAmount", "fuse", "finalFuse"};
+    private bool isActivated = true;
     public void Collectible()
     {
         gameObject.SetActive(false);
@@ -17,12 +17,21 @@ public class InteractableScript : MonoBehaviour
 
     public void Crate()
     {
-
+        if(isActivated)
+        {
+            gameObject.GetComponent<Animator>().SetBool("activated", isActivated);
+            isActivated = false;
+        }
+        else
+        {
+            gameObject.GetComponent<Animator>().SetBool("activated", isActivated);
+            isActivated = true;
+        }
     }
 
     public void DetectionChecker(bool state)
     {
-        if (state)
+        if(state)
         {
             gameObject.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 2);
         }

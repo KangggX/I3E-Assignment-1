@@ -110,9 +110,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 37720254765584288}
-  - component: {fileID: 6615566885919933087}
   - component: {fileID: 6830477304848630739}
   - component: {fileID: 1106392752122230258}
+  - component: {fileID: 727652829461723086}
   - component: {fileID: 1437690385277110890}
   - component: {fileID: 2838688436484140748}
   m_Layer: 3
@@ -138,23 +138,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!111 &6615566885919933087
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2853526892869993779}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d6739938a2598c149aaf2e3fb7055a16, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: d6739938a2598c149aaf2e3fb7055a16, type: 2}
-  - {fileID: 7400000, guid: 48b64535cb28d714c84a3dd97dd13f15, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!33 &6830477304848630739
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -205,6 +188,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &727652829461723086
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2853526892869993779}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f4f4131ea057a041ba7d0cf083b23f0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!64 &1437690385277110890
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -231,6 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30008b4c7fe7c6347b8efa7c68137806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 0}
+  value: 0
+  objectType: 
 --- !u!1 &3824146711407426263
 GameObject:
   m_ObjectHideFlags: 0
