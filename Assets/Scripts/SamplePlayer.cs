@@ -151,7 +151,11 @@ public class SamplePlayer : MonoBehaviour
         {
             GameObject objectTransform = hit.transform.gameObject;
             //Debug.Log(hit.transform.name);
-            if(objectTransform.layer == LayerMask.NameToLayer("Interactable"))
+
+            /// <summary>
+            /// If raycast hits an Interactable object
+            /// </summary>
+            if (objectTransform.layer == LayerMask.NameToLayer("Interactable"))
             {
                 //Debug.Log(objectTransform.GetComponent<MeshRenderer>().materials[1]);
                 currentInteractedObject = objectTransform;

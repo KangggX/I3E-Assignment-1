@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableScript : MonoBehaviour
 {
-    public ScriptableObject playerData;
+    public PlayerItemData playerData;
     public int value;
     public string objectType;
 
@@ -12,14 +12,7 @@ public class InteractableScript : MonoBehaviour
     public void Collectible()
     {
         gameObject.SetActive(false);
-
-        foreach (string i in objectTypeArray)
-        {
-            if (objectType == i)
-            {
-                
-            }
-        }
+        PointGiver(objectType);
     }
 
     public void Crate()
@@ -36,6 +29,26 @@ public class InteractableScript : MonoBehaviour
         else
         {
             gameObject.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 100);
+        }
+    }
+
+    private void PointGiver(string oType)
+    {
+        if(oType == "Battery")
+        {
+            ++playerData.batteryAmount;
+        }
+        else if(oType == "Card")
+        {
+            ++playerData.cardAmount;
+        }
+        else if (oType == "Fuse")
+        {
+            ++playerData.fuse;
+        }
+        else if (oType == "FinalFuse")
+        {
+            ++playerData.finalFuse;
         }
     }
 }

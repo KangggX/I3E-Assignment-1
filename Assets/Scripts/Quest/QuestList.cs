@@ -11,14 +11,20 @@ public class QuestList : MonoBehaviour
 
     private void Awake()
     {
-        foreach(string i in questList)
+        
+        //ListSorter(12, 12);
+    }
+
+    public void ListSorter(int start, int end)
+    {
+        for(int i = start; i < end; ++i)
         {
-            textPrefab.text = i;
-            spawnText();
+            textPrefab.text = questList[i];
+            SpawnText();
         }
     }
 
-    private void spawnText()
+    private void SpawnText()
     {
         Instantiate(textPrefab, questHolder);
     }
