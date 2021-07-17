@@ -5,21 +5,27 @@ using TMPro;
 
 public class QuestList : MonoBehaviour
 {
-    public List<string> questList;
-    public TextMeshProUGUI textPrefab;
     public Transform questHolder;
+    public List<bool> currSector = new List<bool> { true, false, false };
+    public List<TextMeshProUGUI> prefabList;
 
-    public void ListSorter(int start, int end)
+    /// <summary>
+    /// To check if the current text button should be enabled or not
+    /// </summary>
+    public void sectorChecker()
     {
-        for (int i = start; i <= end; ++i)
+        for (int i = 0; i < 3; ++i)
         {
-            textPrefab.text = questList[i];
-            SpawnText();
+            if (currSector[i])
+            {
+                prefabList[i].color = Color.white;
+                prefabList[i].GetComponent<QuestLink>().isEnabled = true;
+                continue;
+            }
+            else
+            {
+                prefabList[i].color = Color.black;
+            }
         }
-    }
-
-    private void SpawnText()
-    {
-        Instantiate(textPrefab, questHolder);
     }
 }

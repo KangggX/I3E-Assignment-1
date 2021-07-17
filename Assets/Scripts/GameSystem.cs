@@ -7,6 +7,11 @@ public class GameSystem : MonoBehaviour
     public GameObject questList;
     private void Awake()
     {
-        questList.GetComponent<QuestList>().ListSorter(0, 2);
+        //questList.GetComponent<QuestList>().ListSorter();
+    }
+
+    private void Update()
+    {
+        questList.GetComponent<QuestList>().sectorChecker();
     }
 }

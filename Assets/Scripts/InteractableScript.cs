@@ -9,13 +9,38 @@ public class InteractableScript : MonoBehaviour
     public string objectType;
 
     private bool isActivated = true;
-    public void Collectible()
+
+    public void Interacting()
+    {
+        if (gameObject.CompareTag("Collectible"))
+        {
+            Collectible();
+        }
+        else if (gameObject.CompareTag("Crate"))
+        {
+            Crate();
+        }
+    }
+
+    public void DetectionChecker(bool state)
+    {
+        if (state)
+        {
+            gameObject.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 2);
+        }
+        else
+        {
+            gameObject.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 100);
+        }
+    }
+
+    private void Collectible()
     {
         gameObject.SetActive(false);
         PointGiver(objectType);
     }
 
-    public void Crate()
+    private void Crate()
     {
         if(isActivated)
         {
@@ -26,18 +51,6 @@ public class InteractableScript : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetBool("activated", isActivated);
             isActivated = true;
-        }
-    }
-
-    public void DetectionChecker(bool state)
-    {
-        if(state)
-        {
-            gameObject.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 2);
-        }
-        else
-        {
-            gameObject.GetComponent<MeshRenderer>().materials[1].SetFloat("_fresnelPower", 100);
         }
     }
 

@@ -12,6 +12,7 @@ Date Created: 09/06/2021
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SamplePlayer : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class SamplePlayer : MonoBehaviour
 
     private GameObject currentInteractedObject;
     private GameObject lastInteractedObject;
+    private string[] collectibleTypes = new string[] {"Battery","ID Card", "Fuse", "Final Fuse"};
     private string currentState;
     private string nextState;
     private float storedRotationSpeed;
@@ -190,13 +192,9 @@ public class SamplePlayer : MonoBehaviour
                 lastInteractedObject = currentInteractedObject;
                 currentInteractedObject.GetComponent<InteractableScript>().DetectionChecker(true);
 
-                if(currentInteractedObject.CompareTag("Collectible") && Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    currentInteractedObject.GetComponent<InteractableScript>().Collectible();
-                }
-                else if (currentInteractedObject.CompareTag("Crate") && Input.GetKeyDown(KeyCode.E))
-                {
-                    currentInteractedObject.GetComponent<InteractableScript>().Crate();
+                    currentInteractedObject.GetComponent<InteractableScript>().Interacting();
                 }
             }
             else
