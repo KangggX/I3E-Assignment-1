@@ -33,9 +33,12 @@ public class SamplePlayer : MonoBehaviour
     public GameObject QuestUI;
     public int jumpPower;
 
+
+    /// <summary>
+    /// Private variables for various purposes such as checking last interacted object using Raycast
+    /// </summary>
     private GameObject currentInteractedObject;
     private GameObject lastInteractedObject;
-    private string[] collectibleTypes = new string[] {"Battery","ID Card", "Fuse", "Final Fuse"};
     private string currentState;
     private string nextState;
     private float storedRotationSpeed;

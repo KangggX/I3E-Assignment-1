@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class DoorPad : MonoBehaviour
 {
+    /// <summary>
+    /// The door animator, drag from the game
+    /// </summary>
     public Animator doorAnimator;
 
+    /// <summary>
+    /// Activates the animator boolean "activated" when triggered
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         doorAnimator.SetBool("activated", true);

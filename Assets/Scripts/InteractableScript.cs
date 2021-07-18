@@ -30,6 +30,10 @@ public class InteractableScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If boolean state is true, pulsing effect fresnel power will be set to 2, else, it will be set to 100
+    /// </summary>
+    /// <param name="state"></param>
     public void DetectionChecker(bool state)
     {
         if (gameObject.GetComponent<MeshRenderer>().materials[1] != null)
@@ -71,6 +75,9 @@ public class InteractableScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function that checks the object type input and activates another function based on the object type and value
+    /// </summary>
     private void Inserter()
     {
         if (objectType == "Battery")
@@ -99,7 +106,7 @@ public class InteractableScript : MonoBehaviour
         {
             if (playerData.currentAdvancedFuseAmount == objectAmount)
             {
-                gameObject.GetComponent<Inserter>().Activate();
+                gameObject.GetComponent<Inserter>().ActivatePortal();
             }
         }
     }

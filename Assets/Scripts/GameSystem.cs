@@ -5,11 +5,10 @@ using UnityEngine;
 public class GameSystem : MonoBehaviour
 {
     public GameObject questList;
-    private void Awake()
-    {
-        //questList.GetComponent<QuestList>().ListSorter();
-    }
 
+    /// <summary>
+    /// To check if the current sector has been unlocked or not
+    /// </summary>
     private void Update()
     {
         questList.GetComponent<QuestList>().sectorChecker();
